@@ -30,6 +30,7 @@ export const Navbar = () => {
               <Link to="/" className="text-gray-700 hover:text-primary font-medium">Home</Link>
               <Link to="/about" className="text-gray-700 hover:text-primary font-medium">About</Link>
               <Link to="/services" className="text-gray-700 hover:text-primary font-medium">Services</Link>
+              <Link to="/testimonials" className="text-gray-700 hover:text-primary font-medium">Testimonials</Link>
               <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">Contact</Link>
             </div>
             
@@ -79,6 +80,13 @@ export const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
+              </Link>
+              <Link 
+                to="/testimonials" 
+                className="text-gray-700 hover:text-primary font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Testimonials
               </Link>
               <Link 
                 to="/contact" 
