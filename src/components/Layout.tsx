@@ -13,8 +13,10 @@ export const Layout = ({ children, showBreadcrumbs = true }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      {showBreadcrumbs && <BreadcrumbNav />}
-      <main className="flex-grow">{children}</main>
+      <div className="pt-20"> {/* Add top padding to account for fixed navbar */}
+        {showBreadcrumbs && <BreadcrumbNav />}
+        <main className="flex-grow">{children}</main>
+      </div>
       <Footer />
     </div>
   );

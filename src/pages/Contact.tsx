@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
+import { Layout } from "@/components/Layout";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -46,9 +46,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-bg-light">
-      <Navbar />
-      <div className="container px-4 py-20 mx-auto mt-12">
+    <Layout>
+      <div className="container px-4 py-20 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-4xl font-bold text-primary mb-4">Contact Us</h1>
           <p className="text-lg text-gray-600">
@@ -175,7 +174,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
