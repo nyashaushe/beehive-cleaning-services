@@ -1,10 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Layout } from "@/components/Layout";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-bg-light">
+    <Layout>
       <div className="container px-4 py-16 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="mb-6 text-4xl font-bold text-primary">About Beehive Cleaning</h1>
@@ -45,7 +46,7 @@ const About = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
