@@ -1,13 +1,12 @@
 
-import { Navbar } from "@/components/Navbar";
+import { Layout } from "@/components/Layout";
 import { Hero } from "@/components/Hero";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
+    <Layout showBreadcrumbs={false}>
       <Hero />
-    </div>
+    </Layout>
   );
 };
 
