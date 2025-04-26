@@ -18,12 +18,9 @@ export const Navbar = () => {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <NavLink to="/">
-                <img src="/lovable-uploads/sitelogo.jpg" alt="Beehive Cleaning" className="h-10" />
+                <img src="/lovable-uploads/logo.png" alt="logo" className="h-12" />
               </NavLink>
-              <div className="hidden md:block">
-                <h1 className="text-lg font-semibold text-primary">Beehive Cleaning</h1>
-                <p className="text-sm text-gray-600"></p>
-              </div>
+
             </div>
           </div>
           

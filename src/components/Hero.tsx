@@ -8,7 +8,7 @@ export const Hero = () => {
       <div className="relative z-10 px-4">
         <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">
-            Professional Cleaning & Maintenance Services
+          BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Experience excellence in cleaning with our professional team. We deliver spotless results for homes and businesses across Abuja.
