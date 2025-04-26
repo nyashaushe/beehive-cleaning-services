@@ -1,5 +1,27 @@
-
 import { Check } from "lucide-react";
+
+const additionalServices = [
+  {
+    name: "Move In/Out Cleaning",
+    price: "N35,000",
+  },
+  {
+    name: "Indoor or Outdoor Fumigation",
+    price: "N35,000",
+  },
+  {
+    name: "Weekly Cleaning",
+    price: "N25,000",
+  },
+  {
+    name: "Generator Repairs",
+    price: "Price based on fault",
+  },
+  {
+    name: "AC Servicing",
+    price: "N10,000 per unit",
+  },
+];
 
 const PricingTable = () => {
   const features = [
@@ -96,8 +118,8 @@ const PricingTable = () => {
         </thead>
         <tbody>
           {features.map((feature, index) => (
-            <tr 
-              key={index} 
+            <tr
+              key={index}
               className={`border-b border-gray-200 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
             >
               <td className="py-4 px-6 text-left text-gray-600">{feature.name}</td>
@@ -126,6 +148,31 @@ const PricingTable = () => {
           ))}
         </tbody>
       </table>
+
+      <h2 className="text-2xl font-bold text-center mt-16 mb-8 text-primary">
+        Additional Services
+      </h2>
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="border-b border-gray-200">
+              <th className="py-4 px-6 text-left text-lg font-medium text-gray-500">Service</th>
+              <th className="py-4 px-6 text-left text-lg font-medium text-gray-500">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {additionalServices.map((service, index) => (
+              <tr
+                key={index}
+                className={`border-b border-gray-200 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
+              >
+                <td className="py-4 px-6 text-left text-gray-600">{service.name}</td>
+                <td className="py-4 px-6 text-left text-gray-600">{service.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

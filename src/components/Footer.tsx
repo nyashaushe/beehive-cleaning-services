@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Beehive Professional</h3>
+            <h3 className="text-lg font-semibold mb-4">BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT</h3>
             <p className="text-gray-400">
               Providing top-quality cleaning services with attention to detail and customer satisfaction.
             </p>
@@ -30,13 +30,13 @@ export const Footer = () => {
               16 Presbyterian Avenue<br />
               Bwari-Abuja<br />
               <a href="tel:+2348140783354" className="hover:text-white transition-colors">+234 814 078 3354</a><br />
-              <a href="mailto:info@beehiveprofessional.com" className="hover:text-white transition-colors">info@beehiveprofessional.com</a>
+              <a href="mailto:Thebeehiveservices@gmail.com" className="hover:text-white transition-colors">Thebeehiveservices@gmail.com</a>
             </address>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Beehive Professional Cleaning Services. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT. All rights reserved.</p>
         </div>
       </div>
     </footer>

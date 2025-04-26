@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Phone, MapPin, X } from "lucide-react";
@@ -17,11 +16,11 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-2">
             <Link to="/">
-              <img src="/lovable-uploads/d9ad50df-06ac-4185-8011-40b40a046600.png" alt="Beehive Logo" className="h-12" />
+              <img src="/lovable-uploads/sitelogo.jpg" alt="BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT" className="h-12" />
             </Link>
             <div className="hidden md:block">
-              <h1 className="text-lg font-semibold text-primary">Beehive Professional</h1>
-              <p className="text-sm text-gray-600">Cleaning Services</p>
+              <h1 className="text-lg font-semibold text-primary">BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT</h1>
+              <p className="text-sm text-gray-600"></p>
             </div>
           </div>
           
