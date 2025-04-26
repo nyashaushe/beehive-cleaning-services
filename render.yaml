@@ -4,5 +4,5 @@ services:
     env: node
     region: oregon
     buildCommand: vite build
-    startCommand: npm run preview
+    startCommand: npm start
     nodeVersion: 20
