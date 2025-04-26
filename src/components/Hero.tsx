@@ -1,4 +1,3 @@
-
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -6,7 +5,7 @@ export const Hero = () => {
   return (
     <section className="pt-20 min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 hero-gradient"></div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="relative z-10 px-4">
         <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">
             Professional Cleaning & Maintenance Services
