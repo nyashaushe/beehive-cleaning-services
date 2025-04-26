@@ -6,7 +6,3 @@ services:
     buildCommand: vite build
     startCommand: npm start
     nodeVersion: 20
-    routes:
-      - source: /*
-        destination: /index.html
-    publishPath: ./dist
