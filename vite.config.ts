@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    preview: {
+      allowedHosts: ["beehive-cleaning-services-3zmd.onrender.com"],
+    },
   },
   plugins: [
     react(),
