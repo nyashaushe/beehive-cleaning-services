@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: beehive-cleaning-services
+    env: node
+    region: oregon
+    buildCommand: vite build
+    startCommand: vite preview
+    nodeVersion: 20
