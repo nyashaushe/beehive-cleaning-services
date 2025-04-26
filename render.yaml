@@ -9,3 +9,4 @@ services:
     routes:
       - source: /*
         destination: /index.html
+    publishPath: ./dist
