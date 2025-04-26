@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Menu, Phone, MapPin, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -15,32 +16,36 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-2">
-            <Link to="/">
-              <img src="/lovable-uploads/sitelogo.jpg" alt="BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT" className="h-12" />
-            </Link>
-            <div className="hidden md:block">
-              <h1 className="text-lg font-semibold text-primary">BEEHIVE PROFFESIONAL CLEANING SERVIVES AND GENERAL CONTRACT</h1>
-              <p className="text-sm text-gray-600"></p>
+            <div className="flex items-center gap-2">
+              <NavLink to="/">
+                <img src="/lovable-uploads/sitelogo.jpg" alt="Beehive Cleaning" className="h-10" />
+              </NavLink>
+              <div className="hidden md:block">
+                <h1 className="text-lg font-semibold text-primary">Beehive Cleaning</h1>
+                <p className="text-sm text-gray-600"></p>
+              </div>
             </div>
           </div>
           
           <div className="hidden md:flex items-center gap-6">
             <div className="flex space-x-6">
-              <Link to="/" className="text-gray-700 hover:text-primary font-medium">Home</Link>
-              <Link to="/about" className="text-gray-700 hover:text-primary font-medium">About</Link>
-              <Link to="/services" className="text-gray-700 hover:text-primary font-medium">Services</Link>
-              <Link to="/pricing" className="text-gray-700 hover:text-primary font-medium">Pricing</Link>
-              <Link to="/testimonials" className="text-gray-700 hover:text-primary font-medium">Testimonials</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">Contact</Link>
+              <NavLink to="/" className={({ isActive }) => `text-gray-700 hover:text-primary font-medium px-3 ${isActive ? "active" : ""}`}>Home</NavLink>
+              <NavLink to="/about" className={({ isActive }) => `text-gray-700 hover:text-primary font-medium px-3 ${isActive ? "active" : ""}`}>About</NavLink>
+              <NavLink to="/services" className={({ isActive }) => `text-gray-700 hover:text-primary font-medium px-3 ${isActive ? "active" : ""}`}>Services</NavLink>
+              <NavLink to="/pricing" className={({ isActive }) => `text-gray-700 hover:text-primary font-medium px-3 ${isActive ? "active" : ""}`}>Pricing</NavLink>
+              <NavLink to="/testimonials" className={({ isActive }) => `text-gray-700 hover:text-primary font-medium px-3 ${isActive ? "active" : ""}`}>Testimonials</NavLink>
+              <NavLink to="/contact" className={({ isActive }) => `text-gray-700 hover:text-primary font-medium px-3 ${isActive ? "active" : ""}`}>Contact</NavLink>
             </div>
             
-            <div className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-primary" />
-              <span className="text-sm">+234 814 078 3354</span>
-            </div>
-            <div className="hidden lg:flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-primary" />
-              <span className="text-sm">16 Presbyterian Avenue, Bwari-Abuja</span>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary" />
+                <span className="text-sm">+234 814 078 3354</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-sm">16 Presbyterian Avenue, Bwari-Abuja</span>
+              </div>
             </div>
             <Button className="bg-primary hover:bg-primary/90">Book Now</Button>
           </div>
@@ -60,56 +65,56 @@ export const Navbar = () => {
         <div className="md:hidden bg-white shadow-md">
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
-              <Link 
+              <NavLink 
                 to="/" 
-                className="text-gray-700 hover:text-primary font-medium py-2"
+                className={({ isActive }) => `text-gray-700 hover:text-primary font-medium py-2 ${isActive ? "active" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </Link>
-              <Link 
+              </NavLink>
+              <NavLink 
                 to="/about" 
-                className="text-gray-700 hover:text-primary font-medium py-2"
+                className={({ isActive }) => `text-gray-700 hover:text-primary font-medium py-2 ${isActive ? "active" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </Link>
-              <Link 
+              </NavLink>
+              <NavLink 
                 to="/services" 
-                className="text-gray-700 hover:text-primary font-medium py-2"
+                className={({ isActive }) => `text-gray-700 hover:text-primary font-medium py-2 ${isActive ? "active" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
-              </Link>
-              <Link 
+              </NavLink>
+              <NavLink 
                 to="/pricing" 
-                className="text-gray-700 hover:text-primary font-medium py-2"
+                className={({ isActive }) => `text-gray-700 hover:text-primary font-medium py-2 ${isActive ? "active" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </Link>
-              <Link 
+              </NavLink>
+              <NavLink 
                 to="/testimonials" 
-                className="text-gray-700 hover:text-primary font-medium py-2"
+                className={({ isActive }) => `text-gray-700 hover:text-primary font-medium py-2 ${isActive ? "active" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
-              </Link>
-              <Link 
+              </NavLink>
+              <NavLink 
                 to="/contact" 
-                className="text-gray-700 hover:text-primary font-medium py-2"
+                className={({ isActive }) => `text-gray-700 hover:text-primary font-medium py-2 ${isActive ? "active" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
+              </NavLink>
               <div className="flex items-center gap-2 py-2">
                 <Phone className="h-4 w-4 text-primary" />
                 <span className="text-sm">+234 814 078 3354</span>
               </div>
-              <div className="flex items-center gap-2 py-2">
+              <NavLink to="/contact" className="flex items-center gap-2 py-2" onClick={() => setIsMenuOpen(false)}>
                 <MapPin className="h-4 w-4 text-primary" />
                 <span className="text-sm">16 Presbyterian Avenue, Bwari-Abuja</span>
-              </div>
+              </NavLink>
               <Button className="bg-primary hover:bg-primary/90 w-full">Book Now</Button>
             </div>
           </div>

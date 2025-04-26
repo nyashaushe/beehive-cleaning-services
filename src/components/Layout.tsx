@@ -15,7 +15,7 @@ export const Layout = ({ children, showBreadcrumbs = true }: LayoutProps) => {
       <Navbar />
       <div className="pt-20"> {/* Add top padding to account for fixed navbar */}
         {showBreadcrumbs && <BreadcrumbNav />}
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow max-w-screen-lg mx-auto">{children}</main>
       </div>
       <Footer />
     </div>
