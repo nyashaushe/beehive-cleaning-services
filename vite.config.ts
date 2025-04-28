@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     port: 8080,
-    host: "beehive-cleaning-services-3zmd.onrender.com",
+    host: process.env.NODE_ENV === 'production' ? 'beehive-cleaning-services-3zmd.onrender.com' : 'localhost',
   },
   plugins: [
     react(),
