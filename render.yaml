@@ -1,8 +1,10 @@
 services:
-  - type: web
+  - type: static
     name: beehive-cleaning-services
-    env: node
-    region: oregon
+    region: oregon # You can change this if needed
     buildCommand: vite build
-    startCommand: npm start
-    nodeVersion: 20
+    publishDirectory: dist
+    # Rewrite all requests to index.html for client-side routing
+    rewrites:
+      - source: /*
+        destination: /index.html
