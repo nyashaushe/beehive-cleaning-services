@@ -12,4 +12,4 @@ services:
     headers:
       - path: /*
         name: Content-Security-Policy
-        value: "script-src 'self' 'unsafe-eval' https: ; object-src 'none'; base-uri 'self';"
+        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:;"
