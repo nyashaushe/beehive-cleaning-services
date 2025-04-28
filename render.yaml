@@ -8,3 +8,8 @@ services:
     rewrites:
       - source: /*
         destination: /index.html
+    # Add custom headers to allow 'unsafe-eval' for scripts
+    headers:
+      - path: /*
+        name: Content-Security-Policy
+        value: "script-src 'self' 'unsafe-eval' https:; object-src 'none'; base-uri 'self';"
