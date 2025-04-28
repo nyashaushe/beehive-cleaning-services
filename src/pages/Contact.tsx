@@ -73,7 +73,7 @@ const Contact = () => {
                   <Mail className="w-5 h-5 text-secondary mt-1" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">info@beehivecleaning.com</p>
+                    <p className="text-gray-600">Thebeehiveservices@gmail.com</p>
                   </div>
                 </div>
                 
